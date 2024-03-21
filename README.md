@@ -163,20 +163,15 @@ jupyterlab==4.0.9
 
 * Baseline 모델인 Kobart-Summarization 사용
 * KoT5 모델 사용을 시도 했으나, Batch Size 이슈로 인해 성공하지 못함
-  
+
 ### Modeling Process
-
-### Model-Centric
-
-#### Hyperparamter Tuning 
+#### 1) Model-Centric : Hyperparamter Tuning 
 
 * Grid Search / Random Search 사용
 
-### Data-Centric
+#### 2) Data-Centric : Topic Modeling
 
-#### Topic Modeling
-
-**Topic Modeling 개념 작성**
+* Topic Modeling 개념 작성 
 
 ## 5. Result
 
