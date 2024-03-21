@@ -3,8 +3,8 @@
 
 | ![김윤겸](https://github.com/gyeom-yee.png) | ![남영진](https://github.com/NamisMe.png) | ![노균호](https://github.com/devguno.png) | ![윤수인](https://github.com/suinY00N.png) | ![정다슬](https://avatars.githubusercontent.com/u/156163982?v=4) |
 | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: |
-|            [김윤겸](https://github.com/gyeom-yee)               |            [남영진](https://github.com/NamisMe)             |            [노균호](https://github.com/devguno)             |            [윤수인](https://github.com/suinY00N)             |            [정다슬](https://github.com/UpstageAILab)             |
-|                         Modeling, 후처리                        |                            Data-Centric, 후처리                      |                         Modeling, Augmentation                 |                            Modeling, 전처리                      |                       Modeling,  hyperparameter tuning         |
+|            [김윤겸](https://github.com/gyeom-yee)               |            [남영진(팀장)](https://github.com/NamisMe)             |            [노균호](https://github.com/devguno)             |            [윤수인](https://github.com/suinY00N)             |            [정다슬](https://github.com/UpstageAILab)             |
+|                         Data-Centric, 후처리                        |                            Modeling, 후처리                      |                         Modeling, Augmentation                 |                            Modeling, 전처리                      |                       Modeling,  hyperparameter tuning         |
 
 ## 0. Overview
 ### Environment
@@ -129,18 +129,23 @@ e.g.
 
 ### Leader Board
 
-- _Insert Leader Board Capture_
-- _Write rank and score_
+- **Public**
+
+![image](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp6/assets/88610815/1fc641ea-7d93-4ce0-bc31-0577333a2731)
+
+- **Private**
+
+![image](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp6/assets/88610815/109bd134-3e85-40ba-badd-25243d0b2d02)
 
 ### Presentation
 
-- _Insert your presentaion file(pdf) link_
+[Presentation File Link](https://docs.google.com/presentation/d/1CghFX7a5Osuk8w4y-qLbC7fYUU18D-yueN_O8GQTTAQ/edit#slide=id.g2b368e284d4_1_311)
 
 ## etc
 
 ### Meeting Log
 
-- _Insert your meeting log link like Notion or Google Docs_
+[Meeting Log](https://www.notion.so/6-1d68ac745f7f4428a014d7e36824f567?pvs=4#9927d4c1f7704322b0cfad4d131af741)
 
 ### Reference
 
