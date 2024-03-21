@@ -170,9 +170,13 @@ jupyterlab==4.0.9
 
 #### Hyperparamter Tuning 
 
+* Grid Search / Random Search 사용
+
 ### Data-Centric
 
 #### Topic Modeling
+
+**Topic Modeling 개념 작성**
 
 ## 5. Result
 
