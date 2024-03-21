@@ -78,8 +78,6 @@ jupyterlab==4.0.9
 
 ### Directory
 
-e.g.
-
 ```
 ├── code
 │   ├── baseline.ipynb
@@ -137,17 +135,32 @@ e.g.
 
 ### Data Augmentation
 
+#### 방법 1
+- Solar API 사용
+- 데이터에서 summary 부분만 augmentation을 진행한 후 이를 학습 데이터에 추가
+- 모델이 다양한 summary 스타일에 더 잘 적응하도록 만들기 위해, summary만 다르게 하고 dialogue는 기존의 것을 재사용
+![열쇠를 찾았습니다](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp6/assets/88610815/d8deeb84-006a-44a4-8b71-e4f68dabe5d8)
+![ZWJQ4oZKVvtWSN-Hn5VxwgdhKZDbgL8MTlahURhNGgN0u6pRWaNdRshhd0YoLTlPSbqvuIOCqM6tW-3VX7XWnpBonxgx8j1SPO0-dqQ-MAxsWeCjl7E_AnIyoyrX](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp6/assets/88610815/20f1cabd-abc8-4abc-93f4-9241f2a079b2)
+
+
+#### 방법 2
+- Solar API, GPT 4 사용
+- 다양한 주제로 구성된 새로운 대화 데이터와 요약문을 생성
+![uab5WiMPKaFBL2xHvDSF40DBqGH9rzVwWQZSqTUqBbUJlemWse_W8KhEEWqaFRkN31KRpO5nca7Fx2P6s4esq-Qw8wP3SY4tqIiAqc8_ahBOJvmgVubIr44Idv8o](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp6/assets/88610815/ed055c9c-220e-4ba2-b3d5-7b31c8acb9ef)
+![oDZLRimvItYX2eCXN1fJwyZooaDzRG7sPHE083jdeaJmsVDuOgN5mXliZZDMCj30Iz_qoJAclOmOxFl26_TSxk-Cd55H9co1CMQm1ZBtNz6h1sZQqKWI3_yInFmY](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp6/assets/88610815/d2171a2d-85eb-4c09-8560-4fa230eca81e)
+
+
 ## 4. Modeling
 
 ### Model descrition
 
-- _Write model information and why your select this model_
-
+* Baseline 모델인 Kobart-Summarization 사용
+* KoT5 모델 사용을 시도 했으나, Batch Size 이슈로 인해 성공하지 못함
+  
 ### Modeling Process
 
-- _Write model train and test process with capture_
-
 ### Model-Centric
+#### Hyperparamter Tuning 
 
 ### Data-Centric
 
