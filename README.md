@@ -10,7 +10,7 @@
 ### Environment
 - 컴퓨팅 환경
     - 서버를 VSCode와 SSH로 연결하여 사용 
-    - NVIDIA GeForce RTX 3090
+    - NVIDIA GeForce RTX 3090 | 24GB
     - CUDA Version 12.2
 - 협업환경
   * Github, WandB
@@ -170,8 +170,23 @@ jupyterlab==4.0.9
 * Grid Search / Random Search 사용
 
 #### 2) Data-Centric : Topic Modeling
+- Train Dataset의 topic 컬럼 학습
+  ![Train example](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp6/assets/78156719/9d5dc355-6a6f-4cdb-8819-be038aebde9f)
+- 기존 Topic 모델(X) / Language 모델(O) 
+  - 데이터셋의 topic 특성 상 LDA를 사용한 Extractive 방식이 아닌 Abtractive 방식 필요
+  - KoBART-summarization을 사용하는 베이스라인 그대로 기용
+    - 요약문 생성, Decoder 길이 제한(generate_max_length=6, decoder_max_len=6)
+    - 타겟을 summary가 아닌 topic으로 학습 및 예측
 
-* Topic Modeling 개념 작성 
+      <img src=https://github.com/UpstageAILab/upstage-nlp-summarization-nlp6/assets/78156719/0f817079-6e74-45eb-b04a-4742e9778345 style="border:1px solid;">
+  - 메타 데이터 학습을 위해 topic과 dialogue를 합친 dialogue_with_topic 컬럼 추가 후 해당 컬럼으로 요약문 학습 및 예측
+    <img src=https://github.com/UpstageAILab/upstage-nlp-summarization-nlp6/assets/78156719/50fb9867-155e-4aa4-8071-72a4efb26e45 style="border:1px solid;">
+  - topic 처리를 위한 Special token 추가: #topcic#
+- Topic 추가 학습 실행 결과 성능이 향상됨✅
+
+![image](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp6/assets/78156719/f131e0cd-be97-4e77-aaad-b73121bf12ea)
+![image](https://github.com/UpstageAILab/upstage-nlp-summarization-nlp6/assets/78156719/fded8d72-e903-4b89-b763-74c43a4b31b5)
+
 
 ## 5. Result
 
