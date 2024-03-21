@@ -1,9 +1,9 @@
 # Diaglogue Summarization | 일상 대화 요약
 ## Team NLP 4조
 
-| ![김윤겸](https://github.com/gyeom-yee.png) | ![남영진](https://github.com/NamisMe.png) | ![노균호](https://github.com/devguno.png) | ![윤수인](https://github.com/suinY00N.png) | ![정다슬](https://avatars.githubusercontent.com/u/156163982?v=4) |
+| ![김윤겸](https://github.com/gyeom-yee.png) | ![남영진](https://github.com/NamisMe.png) | ![노균호](https://github.com/devguno.png) | ![윤수인](https://github.com/suinY00N.png) | ![정다슬](https://github.com/everlastingcolour.png) |
 | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: | :--------------------------------------------------------------: |
-|            [김윤겸](https://github.com/gyeom-yee)               |            [남영진(팀장)](https://github.com/NamisMe)             |            [노균호](https://github.com/devguno)             |            [윤수인](https://github.com/suinY00N)             |            [정다슬](https://github.com/UpstageAILab)             |
+|            [김윤겸](https://github.com/gyeom-yee)               |            [남영진(팀장)](https://github.com/NamisMe)             |            [노균호](https://github.com/devguno)             |            [윤수인](https://github.com/suinY00N)             |            [정다슬](https://github.com/everlastingcolour)             |
 |                         Data-Centric, 후처리                        |                            Modeling, 후처리                      |                         Modeling, Augmentation                 |                            Modeling, 전처리                      |                       Modeling,  hyperparameter tuning         |
 
 ## 0. Overview
@@ -124,14 +124,21 @@ jupyterlab==4.0.9
     - fname : 대화 고유번호 입니다. 중복되는 번호가 없습니다.
     - dialogue : 최소 2명에서 최대 7명이 등장하여 나누는 대화 내용입니다. 각각의 발화자를 구분하기 위해#Person”N”#: 을 사용하며, 발화자의 대화가 끝나면 \n 으로 구분합니다. 이 구분자를 기준으로 하여 대화에 몇 명의 사람이 등장하는지 확인해보는 부분은 [EDA](https://colab.research.google.com/drive/1O3ZAcHR9q7dccasRcxvNhCZD-gIlasGV#scrollTo=usQutfBFqtuk)에서 다루고 있습니다.
     - summary : 해당 대화를 바탕으로 작성된 요약문입니다.
-  
-### EDA
-
-- _Describe your EDA process and step-by-step conclusion_
-
 ### Data Processing
 
-- _Describe data processing process (e.g. Data Labeling, Data Cleaning..)_
+#### 개인정보 마스킹
+```
+개인정보 내역을 마스킹함
+전화번호 → #PhoneNumber#
+주소 → #Address#
+생년월일 → #DateOfBirth#
+여권번호 → #PassportNumber#
+사회보장번호 → #SSN#
+신용카드 번호 → #CardNumber#
+차량 번호 → #CarNumber#
+이메일 주소 → #Email#
+```
+* 마스킹 후 tokenizer에 추가
 
 ### Data Augmentation
 
@@ -160,10 +167,12 @@ jupyterlab==4.0.9
 ### Modeling Process
 
 ### Model-Centric
+
 #### Hyperparamter Tuning 
 
 ### Data-Centric
 
+#### Topic Modeling
 
 ## 5. Result
 
