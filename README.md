@@ -18,16 +18,18 @@
   * Slack, Zoom
 
 ### Requirements
-- pandas==2.1.4
-- numpy==1.23.5
-- wandb==0.16.1
-- tqdm==4.66.1
-- pytorch_lightning==2.1.2
-- transformers[torch]==4.35.2
-- rouge==1.0.1
-- jupyter==1.0.0
-- jupyterlab==4.0.9
+```
+pandas==2.1.4
+numpy==1.23.5
+wandb==0.16.1
+tqdm==4.66.1
+pytorch_lightning==2.1.2
+transformers[torch]==4.35.2
+rouge==1.0.1
+jupyter==1.0.0
+jupyterlab==4.0.9
 
+```
 ## 1. Competiton Info
 
 ### Overview
@@ -149,4 +151,6 @@ e.g.
 
 ### Reference
 
-- _Insert related reference_
+* 사용 모델 : Kobart Summarization
+
+  [HuggingFace](https://huggingface.co/gogamza/kobart-summarization)
