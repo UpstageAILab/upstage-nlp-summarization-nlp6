@@ -33,7 +33,7 @@ jupyterlab==4.0.9
 ## 1. Competiton Info
 
 ### Overview
-- **Dialogue Summarization 경진대회**
+#### **Dialogue Summarization 경진대회**
 
   주어진 데이터를 활용하여 일상 대화에 대한 요약을 효과적으로 생성하는 모델을 개발하는 대회
 
@@ -49,6 +49,13 @@ jupyterlab==4.0.9
         - input : 249개의 대화문
         - output : 249개의 대화 요약문
 
+- **Evaluation**
+
+  - 예측된 요약 문장을 3개의 정답 요약 문장과 비교하여 metric의 평균 점수를 산출합니다.
+  - DialogSum 데이터셋은 Multi-Reference Dataset으로 multi-reference에 대한 average를 보는 것이 중요합니다. 
+  - 본 대회에서는 ROUGE-1-F1, ROUGE-2-F1, ROUGE-L-F1, 총 3가지 종류의 metric으로부터 산출된 평균 점수를 더하여 최종 점수를 계산합니다.
+  - 3개의 정답 요약 문장의 metric 평균 점수를 활용하기에 metric 점수가 100점이 만점이 아니며, 3개의 정답 요약 문장 중 하나를 랜덤하게 선택하여 산출된 점수가 약 70점 정도입니다.
+  
 ### Timeline
 
 - 24/03/08
@@ -75,17 +82,28 @@ e.g.
 
 ```
 ├── code
-│   ├── jupyter_notebooks
-│   │   └── model_train.ipynb
-│   └── train.py
-├── docs
-│   ├── pdf
-│   │   └── (Template) [패스트캠퍼스] Upstage AI Lab 1기_그룹 스터디 .pptx
-│   └── paper
-└── input
-    └── data
-        ├── eval
-        └── train
+│   ├── baseline.ipynb
+│   ├── baseline_optuna.ipynb
+│   └── baseline_with_topic.ipynb
+├── configs
+│   ├── config.yaml
+│   ├── config.yaml
+│   ├── config.yaml
+│   └──paper 
+└── data
+│   ├── train.csv
+│   ├── dev.csv
+│   ├── test.csv
+│   ├── sample_submission.csv
+├── results
+│   └──checkpoint
+│   │   ├── checkpoint-1750
+│   │   ├── checkpoint-2000
+│   │   ├── checkpoint-2250
+│   │   ├── checkpoint-2500
+│   └──csv
+│   │   ├── output.csv
+
 ```
 
 ## 3. Data descrption
@@ -117,6 +135,8 @@ e.g.
 
 - _Describe data processing process (e.g. Data Labeling, Data Cleaning..)_
 
+### Data Augmentation
+
 ## 4. Modeling
 
 ### Model descrition
@@ -126,6 +146,11 @@ e.g.
 ### Modeling Process
 
 - _Write model train and test process with capture_
+
+### Model-Centric
+
+### Data-Centric
+
 
 ## 5. Result
 
