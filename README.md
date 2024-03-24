@@ -202,7 +202,7 @@ jupyterlab==4.0.9
 
 ### Presentation
 
-[Presentation File Link](https://docs.google.com/presentation/d/1CghFX7a5Osuk8w4y-qLbC7fYUU18D-yueN_O8GQTTAQ/edit#slide=id.g2b368e284d4_1_311)
+[Presentation File Link](https://docs.google.com/presentation/d/1M8d52Sqx7eN_8Yk7zubBvoJE2KNa5dOHuB8cmO-9UBo/edit?usp=sharing)
 
 ## etc
 
